@@ -1,0 +1,80 @@
+
+[indentation]
+indent_width=2
+indent_type=0
+indent_hard_tab_width=8
+detect_indent=false
+indent_mode=2
+detect_indent_width=false
+
+[project]
+name=turnserver
+base_path=../../src
+description=
+file_patterns=*.c;*.h;
+
+[long line marker]
+long_line_behaviour=1
+long_line_column=72
+
+[files]
+current_page=25
+FILE_NAME_0=1878;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Faccount.c;0;2
+FILE_NAME_1=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Faccount.h;0;2
+FILE_NAME_2=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fallocation.c;0;2
+FILE_NAME_3=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fallocation.h;0;2
+FILE_NAME_4=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fconf.c;0;2
+FILE_NAME_5=1102;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fconf.h;0;2
+FILE_NAME_6=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fdbg.c;0;2
+FILE_NAME_7=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fdbg.h;0;2
+FILE_NAME_8=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Flist.h;0;2
+FILE_NAME_9=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fmod_tmpuser.c;0;2
+FILE_NAME_10=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fmod_tmpuser.h;0;2
+FILE_NAME_11=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fprotocol.c;0;2
+FILE_NAME_12=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fprotocol.h;0;2
+FILE_NAME_13=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Ftest_echo_server.c;0;2
+FILE_NAME_14=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Ftest_turn_client.c;0;2
+FILE_NAME_15=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Ftls_peer.c;0;2
+FILE_NAME_16=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Ftls_peer.h;0;2
+FILE_NAME_17=10312;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fturn.h;0;2
+FILE_NAME_18=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fturnserver.c;0;2
+FILE_NAME_19=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fturnserver.h;0;2
+FILE_NAME_20=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Futil_crypto.c;0;2
+FILE_NAME_21=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Futil_crypto.h;0;2
+FILE_NAME_22=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Futil_sys.c;0;2
+FILE_NAME_23=0;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Futil_sys.h;0;2
+FILE_NAME_24=1256;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fdatabase.c;0;2
+FILE_NAME_25=253;C;0;16;0;1;0;%2Fhome%2Fftp%2Fgit%2Fgithub%2Fturnserver-mysql%2Fsrc%2Fdatabase.h;0;2
+
+[file_prefs]
+final_new_line=true
+ensure_convert_new_lines=false
+strip_trailing_spaces=false
+replace_tabs=false
+
+[VTE]
+last_dir=/home/pmandic
+
+[build-menu]
+CFT_00_LB=_Compile
+CFT_00_CM=g++ -Wall -c "%f" -I. -I..
+CFT_00_WD=
+CFT_01_LB=_Build
+CFT_01_CM=g++ -Wall -o "%e" "%f" -I. -I..
+CFT_01_WD=
+filetypes=C;C++;
+C++FT_00_LB=_Compile
+C++FT_00_CM=g++ -Wall -c "%f" -I.
+C++FT_00_WD=
+C++FT_01_LB=_Build
+C++FT_01_CM=g++ -Wall -o test test.cpp secureprim.hpp -I.
+C++FT_01_WD=
+EX_00_LB=_Execute
+EX_00_CM=./test
+EX_00_WD=
+NF_00_LB=_Make
+NF_00_CM=cd ../; make 
+NF_00_WD=
+NF_01_LB=Make Custom _Target
+NF_01_CM=cd ../; make 
+NF_01_WD=

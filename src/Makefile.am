@@ -1,4 +1,4 @@
-AM_CFLAGS = -std=c99 -Wall -Wextra -Werror -Wstrict-prototypes -Wredundant-decls -Wshadow -pedantic -fno-strict-aliasing -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -O2
+AM_CFLAGS = -std=c99 -Wall -Wextra -Werror -Wstrict-prototypes -Wredundant-decls -Wshadow -pedantic -fno-strict-aliasing -D_POSIX_C_SOURCE=200112L -D_XOPEN_SOURCE=600 -O2 $$(mysql_config --libs)
 
 if ENABLE_DEBUG_BUILD
 AM_CFLAGS += -g 
@@ -6,7 +6,8 @@ else
 AM_CFLAGS += -DNDEBUG
 endif
 
-INCLUDE = -I.
+INCLUDE = -I. $$(mysql_config --cflags)
+
 bin_PROGRAMS = turnserver test_turn_client test_echo_server
 noinst_HEADERS = turnserver.h \
 								 turn.h \
@@ -17,6 +18,7 @@ noinst_HEADERS = turnserver.h \
 								 list.h \
 								 tls_peer.h \
 								 allocation.h \
+								 database.h \
 								 account.h \
 								 conf.h \
 								 mod_tmpuser.h
@@ -28,6 +30,7 @@ turnserver_SOURCES = turnserver.c \
 										 util_crypto.c \
 										 tls_peer.c \
 										 allocation.c \
+										 database.c \
 										 account.c \
 										 conf.c \
 										 mod_tmpuser.c

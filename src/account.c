@@ -47,6 +47,11 @@
 #include "account.h"
 #include "protocol.h"
 
+#ifdef USE_DATABASE
+#include "syslog.h"
+#include "database.h"
+#endif
+
 struct account_desc* account_desc_new(const char* username,
     const char* password, const char* realm, enum account_state state)
 {
@@ -105,10 +110,37 @@ struct account_desc* account_list_find(struct list_head* list,
       /* if realm is specified, try a match otherwise the peer is found */
       if(!realm || !strncmp(tmp->realm, realm, sizeof(tmp->realm) - 1))
       {
+        //~ syslog(LOG_NOTICE, "Peer found in list.");
         return tmp;
       }
     }
   }
+
+// vvv ---- using database ----------------------------------------------------
+#ifdef USE_DATABASE
+  syslog(LOG_NOTICE, "Peer not found in list.");
+
+  char* user_password = turn_get_password(username);
+  if(user_password != NULL)
+  {
+    account_list_add
+    (
+      list,
+      account_desc_new(username, user_password, realm, AUTHORIZED)
+    );
+    free(user_password);
+    syslog(LOG_NOTICE, "Peer found in database and added to the list.");
+    return account_list_find(list, username, realm);
+  }
+  else
+  {
+    free(user_password);
+    syslog(LOG_WARNING, "Peer not found in database.");
+    return NULL;
+  }
+#endif
+// ^^^ ---- using database ----------------------------------------------------
+
 
   /* not found */
   return NULL;

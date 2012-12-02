@@ -73,6 +73,10 @@
 #include "turnserver.h"
 #include "mod_tmpuser.h"
 
+#ifdef USE_DATABASE
+#include "database.h"
+#endif
+
 #ifndef HAVE_SIGACTION
 /* expiration stuff use real-time signals
  * that can only be handled by sigaction
@@ -4285,6 +4289,11 @@ static void turnserver_main(struct listen_sockets* sockets,
 
   (void)proto;
 
+#ifdef USE_DATABASE
+  turn_connect_user_database();
+  syslog(LOG_NOTICE, "----------- connecting to database!");
+#endif
+  
   max_fd = SFD_SETSIZE;
 
   if(max_fd <= 0)
@@ -4932,6 +4941,9 @@ static void turnserver_main(struct listen_sockets* sockets,
     get_error(errno, error_str, sizeof(error_str));
     debug(DBG_ATTR, "select() failed: %s\n", error_str);
   }
+#ifdef USE_DATABASE
+//  turn_disconnect_user_database();
+#endif
 }
 
 /**

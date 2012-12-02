@@ -1,4 +1,4 @@
 turnserver-mysql
 ================
 
-turnserver with mysql user database (instead of user list in file)
+turnserver with support of mysql user database
